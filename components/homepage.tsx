@@ -2,7 +2,6 @@
 
 import { Button } from "@/components/ui/button"
 import { usePrivy } from '@privy-io/react-auth';
-import Providers from '@/components/Providers';
 
 function ConnectWalletButton() {
   const { login, ready } = usePrivy();
@@ -20,14 +19,12 @@ function ConnectWalletButton() {
 
 export function Homepage() {
   return (
-    <Providers>
         <div className="flex min-h-screen flex-col items-center justify-center bg-background">
           <header className="mb-8 text-center">
             <h1 className="text-2xl font-bold text-primary">Privy & Coinbase Smart Wallet</h1>
-            <p className="text-sm">Connect your Coinbase Smart Wallet to get started</p>
+            <p className="text-sm">Default Smart Wallet implementation</p>
           </header>
           <ConnectWalletButton />
         </div>
-    </Providers>
   )
 }
