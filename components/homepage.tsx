@@ -27,7 +27,10 @@ export function Homepage() {
         <p className="text-sm">Coinbase Smart Wallet implementation</p>
       </header>
       {ready && authenticated ? (
-        <p className="mb-4 text-md">You are succesfully logged in. User ID: {user?.id}</p>
+        <div className="text-center">
+          <p className="mb-4 text-sm">You are successfully logged in.</p>
+          <p className="mb-4 text-sm">User ID: {user?.id}</p>
+        </div>
       ) : (
         <ConnectWalletButton />
       )}
